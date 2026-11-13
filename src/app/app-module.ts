@@ -16,6 +16,8 @@ import { HospitalesApiComponent } from './components/hospitales-api-component/ho
 import { ServiceHospitales } from './services/service.hospitales';
 import { CustomersApiComponent } from './components/customers-api-component/customers-api-component';
 import { ServiceCustomers } from './services/service.customers';
+import { CochesApiComponent } from './components/coches-api-component/coches-api-component';
+import { ServiceCoches } from './services/service.coches';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { ServiceCustomers } from './services/service.customers';
     PersonasApiComponent,
     HospitalesApiComponent,
     CustomersApiComponent,
+    CochesApiComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
@@ -36,6 +39,7 @@ import { ServiceCustomers } from './services/service.customers';
     ServiceComics,
     ServiceClientes,
     ServiceCustomers,
+    ServiceCoches,
     provideBrowserGlobalErrorListeners(),
   ],
   bootstrap: [App],

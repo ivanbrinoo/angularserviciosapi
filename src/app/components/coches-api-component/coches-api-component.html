@@ -1,0 +1,19 @@
+<p>coches-api-component works!</p>
+<form #formulario="ngForm">
+    Introduce la marca: <input type="text" name="cajamarca" #cajamarca />
+    <button>Buscar</button>
+
+</form>
+@for(coche of arraycoches; track coche) {
+    <div class="card" style="width: 18rem;">
+  <div class="card-header">
+    {{coche.idCoche}}
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{coche.marca}}</li>
+    <li class="list-group-item">{{coche.modelo}}</li>
+    <li class="list-group-item">{{coche.conductor}}</li>
+    <li class="list-group-item"><img src="{{coche.imagen}}" style="width: 200px;"></li>
+  </ul>
+</div>
+}
