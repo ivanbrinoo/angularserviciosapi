@@ -1,0 +1,18 @@
+<h1>Funciona?</h1>
+<form #formulario="ngForm">
+    Introduce la ID: <input type="text" name="cajaid" #cajaid />
+    <button (click)="buscarCustomers()">Buscar</button>
+    
+</form>
+@for(customer of arraycustomers; track customer){
+    <div class="card" style="width: 18rem;">
+<div class="card-header">
+    {{customer.CustomerID}}
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{customer.CompanyName}}</li>
+    <li class="list-group-item">{{customer.Country}}</li>
+    <li class="list-group-item">{{customer.Phone}}</li>
+  </ul>
+</div>
+}

@@ -14,6 +14,8 @@ import { ServicePersonas } from './services/service.personas';
 import { FormsModule } from '@angular/forms';
 import { HospitalesApiComponent } from './components/hospitales-api-component/hospitales-api-component';
 import { ServiceHospitales } from './services/service.hospitales';
+import { CustomersApiComponent } from './components/customers-api-component/customers-api-component';
+import { ServiceCustomers } from './services/service.customers';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { ServiceHospitales } from './services/service.hospitales';
     ClientesComponent,
     PersonasApiComponent,
     HospitalesApiComponent,
+    CustomersApiComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
@@ -32,6 +35,7 @@ import { ServiceHospitales } from './services/service.hospitales';
     ServicePersonas,
     ServiceComics,
     ServiceClientes,
+    ServiceCustomers,
     provideBrowserGlobalErrorListeners(),
   ],
   bootstrap: [App],
