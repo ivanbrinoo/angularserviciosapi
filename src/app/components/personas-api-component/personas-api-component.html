@@ -1,0 +1,25 @@
+<h1>Api Personas</h1>
+<form #form="ngForm">
+    Id persona:
+    <input type="number" name="cajaid" #cajaid/>
+    <button (click)="buscarPersona()">
+        Buscar
+    </button>
+</form>
+@if (person){
+    <div style="background-color: lightgreen;">
+        <h2>{{person.nombre}}</h2>
+        <p>{{person.email}}</p>
+        <p>{{person.edad}}</p>
+    </div>
+}
+
+<button (click)="cargarPersonas()" class="btn btn-info">
+    Mostrar personas
+</button>
+@for (persona of arraypersonas; track persona){
+    <h3 style="color:blue">Nombre {{persona.nombre}}</h3>
+    <p>Email: {{persona.email}}</p>
+    <p>Edad: {{persona.edad}}</p>
+    <p>Id persona: {{persona.idPersona}}</p>
+}

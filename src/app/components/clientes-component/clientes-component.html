@@ -1,0 +1,7 @@
+<h1>Service clientes</h1>
+@for (cliente of arrayclientes; track cliente){
+    <p>Nombre: {{cliente.nombre}}</p>
+    <p>Web: {{cliente.paginaweb}}</p>
+    <img src="{{cliente.imagencliente}}"
+        style="width: 150px; height: 150px;">/
+}
