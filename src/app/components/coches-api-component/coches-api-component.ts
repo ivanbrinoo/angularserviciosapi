@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Coches } from '../../models/coche';
 import { ServiceCoches } from '../../services/service.coches';
 
@@ -10,6 +10,15 @@ import { ServiceCoches } from '../../services/service.coches';
 })
 export class CochesApiComponent implements OnInit {
 [x: string]: any;
+  @ViewChild("cajaid") cajaid!: ElementRef;
+  car!: Coches;
+  async buscarCoche(): Promise<void> {
+    let idcoche = parseInt(this.cajaid.nativeElement.value);
+    this.car = await this._service.buscarCochesAsync(idcoche);
+    this._cdr.detectChanges();
+  }
+
+
   arraycoches: Coches[] = [];
 
   constructor(

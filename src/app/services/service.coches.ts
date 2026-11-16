@@ -22,6 +22,12 @@ export class ServiceCoches {
             
     }
 
-    
+    async buscarCochesAsync(idCoche: number): Promise<Coches> {
+        let request = "api/coches/FindCoche/" + idCoche;
+        let url = environment.coches + request;
+        return firstValueFrom(
+            this._http.get<Coches>(url)
+        )
+    }
     
 }
